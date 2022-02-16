@@ -72,3 +72,24 @@ app.use(errorHandler);
 app.listen(process.env.PORT, () => {
   console.log("SERVER UP AND RUNNING".bold.cyan);
 });
+
+// const createServer =() => {
+//   app.use(bodyParser.json());
+// app.use(express.json());
+// app.use(cors());
+// app.use(helmet());
+// app.use(morgan("common"));
+// app.use(express.urlencoded({ extended: false }));
+// app.use("/api/hospitals", hospitalRoutes);
+// app.use("/api/user", userRoutes);
+// app.use("/api/userAppointment", appointmentRoutes);
+// app.use("/api/reports", userReports);
+// app.use("/api/doctor", doctorRoutes);
+// app.use("/api/medic", medicRoutes);
+// app.use(notFound);
+// app.use(errorHandler);
+// }
+
+// module.exports = createServer;
+
+module.exports = { app };
