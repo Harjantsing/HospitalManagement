@@ -5,7 +5,8 @@
     "scripts": {
         "test": "jest __tests__ --forceExit",
         "test:watch": "jest --watchAll --forceExit",
-        "start": "nodemon index.js"
+        "start": "node index.js",
+        "dev": "nodemon index.js"
     },
     "license": "MIT",
     "dependencies": {
