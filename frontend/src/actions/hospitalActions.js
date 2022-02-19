@@ -12,7 +12,7 @@ import {
   HOSPITAL_EVENTS_ADD,
 } from "../constants/hospitalConstants";
 
-const BASE_URL = `${proccess.env.REACT_APP_BACKEND_URL}api`;
+const BASE_URL = `${process.env.REACT_APP_BACKEND_URL}api`;
 
 export const hospitalLoginAction = (email, password) => async (
   dispatch,
@@ -21,7 +21,7 @@ export const hospitalLoginAction = (email, password) => async (
   try {
     dispatch({ type: HOSPITAL_LOGIN_REQUEST });
     const { data } = await axios.post(
-      `${proccess.env.REACT_APP_BACKEND_URL}api/hospitals/loginHospital`,
+      `${process.env.REACT_APP_BACKEND_URL}api/hospitals/loginHospital`,
       {
         email,
         password,
@@ -71,7 +71,7 @@ export const hospitalRegisterAction = (
     const {
       data,
     } = await axios.post(
-      `${proccess.env.REACT_APP_BACKEND_URL}api/hospitals/registerHospital`,
+      `${process.env.REACT_APP_BACKEND_URL}api/hospitals/registerHospital`,
       { name, email, password, contact1, contact2 }
     );
     console.log(data);

@@ -66,7 +66,7 @@ function AppointmentButton({ open, setOpen}) {
     try {
       setIsSubmitting(true);
       await axios.post(
-        `${proccess.env.REACT_APP_BACKEND_URL}api/userAppointment/${params.hospitalID}/appointment/setappointment/`,
+        `${process.env.REACT_APP_BACKEND_URL}api/userAppointment/${params.hospitalID}/appointment/setappointment/`,
         newAppointment
       );
       alert(
@@ -81,7 +81,7 @@ function AppointmentButton({ open, setOpen}) {
     setIsSubmitting(false);
 
     // const reqBody = {
-    //   url: `${proccess.env.REACT_APP_BACKEND_URL}api/userAppointment/60e0638708e8331f5cb3f9bd/appointment/setappointment/`,
+    //   url: `${process.env.REACT_APP_BACKEND_URL}api/userAppointment/60e0638708e8331f5cb3f9bd/appointment/setappointment/`,
     //   method: "post",
     //   body: newAppointment
     // }

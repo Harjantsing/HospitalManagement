@@ -41,7 +41,7 @@ function Userdashboard() {
   const [hospitals, sethospitals] = useState([]);
   useEffect(() => {
     axios
-      .get(`${proccess.env.REACT_APP_BACKEND_URL}api/hospitals/allHospital`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}api/hospitals/allHospital`)
       .then((response) => {
         sethospitals([...response.data]);
         console.log(response);

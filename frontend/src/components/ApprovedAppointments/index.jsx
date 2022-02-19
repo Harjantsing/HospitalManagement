@@ -18,7 +18,7 @@ const H2 = styled.h2`
 
 const ApprovedAppointments = () => {
     const { id } = useParams();
-    const local = `${proccess.env.REACT_APP_BACKEND_URL}api`;
+    const local = `${process.env.REACT_APP_BACKEND_URL}api`;
 
 
     const asignDate = useRef();
@@ -44,7 +44,7 @@ const ApprovedAppointments = () => {
         const formData = new FormData();
         formData.append("report", file);
         await axios.post(
-            `${proccess.env.REACT_APP_BACKEND_URL}api/reports/${id}/uploadreport`,
+            `${process.env.REACT_APP_BACKEND_URL}api/reports/${id}/uploadreport`,
             formData
         );
         console.log("reports");

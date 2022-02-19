@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 function UserAppointments() {
   const userLogin = useSelector((state) => state.userLogin);
   console.log(userLogin);
-  const local = `${proccess.env.REACT_APP_BACKEND_URL}api`;
+  const local = `${process.env.REACT_APP_BACKEND_URL}api`;
   const [appointmentList, setAppointmentList] = useState([]);
   const [setHosId, setSetHosId] = useState();
   const id = useParams().id;
