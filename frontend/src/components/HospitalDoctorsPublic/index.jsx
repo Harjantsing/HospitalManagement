@@ -71,7 +71,7 @@ const HospitalDoctors = ({ hospitalData }) => {
         const getDoctorsData = async () => {
             try {
 
-                const doctors = await axios(`http://localhost:5000/api/hospitals/${hospitalID}/allDoctors`);
+                const doctors = await axios(`${proccess.env.REACT_APP_BACKEND_URL}api/hospitals/${hospitalID}/allDoctors`);
                 console.log(doctors)
                 setDoctors(doctors.data);
             }

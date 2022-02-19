@@ -21,7 +21,7 @@ const ModalBody = styled.div`
 const InputGroup = styled.div`
   margin-bottom: 30px;
 `;
-const BASE_URL = `http://localhost:5000/api`;
+const BASE_URL = `${proccess.env.REACT_APP_BACKEND_URL}api`;
 const AddEvent = ({ open, setOpen, type }) => {
   const [topic, setTopic] = useState("");
   const [charge, setCharge] = useState(0);

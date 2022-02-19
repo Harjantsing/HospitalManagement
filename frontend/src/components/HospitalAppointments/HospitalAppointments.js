@@ -18,7 +18,7 @@ function HospitalAppointments() {
   const [datas, setDatas] = useState([]);
 
   const id = useParams().hospitalId;
-  const local = "http://localhost:5000/api";
+  const local = `${proccess.env.REACT_APP_BACKEND_URL}api`;
 
   useEffect(() => {
     const getAppoiments = async () => {
@@ -80,7 +80,7 @@ function HospitalAppointments() {
     const formData = new FormData();
     formData.append("report", file);
     await axios.post(
-      `http://localhost:5000/api/reports/${id}/uploadreport`,
+      `${proccess.env.REACT_APP_BACKEND_URL}api/reports/${id}/uploadreport`,
       formData
     );
     console.log("reports");

@@ -47,7 +47,7 @@ const AddBed = ({ open, setOpen }) => {
     setSubmitting(true);
     const reqBody = {
       method: "post",
-      url: `http://localhost:5000/api/hospitals/${id}/bedTypes`,
+      url: `${proccess.env.REACT_APP_BACKEND_URL}api/hospitals/${id}/bedTypes`,
       body: { icu, ventilators, others },
     };
     const [data, error] = await axiosRequest(reqBody);

@@ -2,7 +2,7 @@ import {ADD_TO_CART} from '../constants/cartConstants'
 import axios from 'axios'
 
 export const addToCart= (id, qty)=>async( dispatch, getState)=>{
-    const {data}= await axios.get(`http://localhost:5000/api/medic/${id}`)
+    const {data}= await axios.get(`${proccess.env.REACT_APP_BACKEND_URL}api/medic/${id}`)
 
     dispatch({
         type: ADD_TO_CART,

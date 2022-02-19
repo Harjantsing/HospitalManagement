@@ -12,7 +12,7 @@ export const doctorLoginAction = (email, password) => async (
     try {
         dispatch({ type: DOCTOR_LOGIN_REQUEST });
         const { data } = await axios.post(
-            "http://localhost:5000/api/doctors/loginHospital",
+            `${proccess.env.REACT_APP_BACKEND_URL}api/doctors/loginHospital`,
             {
                 email,
                 password,
@@ -58,7 +58,7 @@ export const doctorRegisterAction = (
         const {
             data,
         } = await axios.post(
-            "http://localhost:5000/api/doctor/doc_register",
+            `${proccess.env.REACT_APP_BACKEND_URL}api/doctor/doc_register`,
             {
                 name,
                 email,

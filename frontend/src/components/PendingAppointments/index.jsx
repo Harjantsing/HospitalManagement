@@ -50,7 +50,7 @@ const PendingAppointments = () => {
     const [datas, setDatas] = useState([]);
 
     const { id } = useParams();
-    const local = "http://localhost:5000/api";
+    const local = `${proccess.env.REACT_APP_BACKEND_URL}api`;
 
     const setSchedule = {
         token: assignedToken,
@@ -82,7 +82,7 @@ const PendingAppointments = () => {
         
         const getTableDatas = async () => {
             const { data } = await axios.get(
-              `http://localhost:5000/userAppointment/allAppointments`
+              `${proccess.env.REACT_APP_BACKEND_URL}userAppointment/allAppointments`
             );
             return data;
         }

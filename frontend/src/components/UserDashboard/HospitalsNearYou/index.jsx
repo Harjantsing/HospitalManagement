@@ -90,7 +90,7 @@ const Index = () => {
         const getAllHospitals = async () => {
             setLoading(true);
             try {
-                const hospitalDatas = await axios("http://localhost:5000/api/hospitals/allHospital");
+                const hospitalDatas = await axios(`${proccess.env.REACT_APP_BACKEND_URL}api/hospitals/allHospital`);
                 setLoading(false)
                 console.log(hospitalDatas.data)
                 setHospitals([...hospitalDatas.data]);

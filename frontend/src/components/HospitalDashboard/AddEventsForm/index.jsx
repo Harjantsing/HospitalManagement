@@ -30,7 +30,7 @@ const TwoColumnGroups = styled.div`
   }
 `;
 
-const BASE_URL = `http://localhost:5000/api`;
+const BASE_URL = `${proccess.env.REACT_APP_BACKEND_URL}api`;
 
 const AddEvent = ({ open, setOpen, type }) => {
   const [eventName, setEventName] = useState("");

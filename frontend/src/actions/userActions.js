@@ -7,7 +7,7 @@ import {
 export const userLoginAction = (email, password) => async (dispatch, getState) => {
   try {
     dispatch({ type: USER_LOGIN_REQUEST })
-    const { data } = await axios.post('http://localhost:5000/api/user/login', { email, password })
+    const { data } = await axios.post(`${proccess.env.REACT_APP_BACKEND_URL}api/user/login`, { email, password })
     console.log(data)
 
     dispatch({
@@ -36,7 +36,7 @@ export const userRegisterAction = (name, email, dob, contacts, password) => asyn
       type: USER_REGISTER_REQUEST,
     });
 
-    const { data } = await axios.post("http://localhost:5000/api/user/register", { name, email, password, dob, contacts });
+    const { data } = await axios.post(`${proccess.env.REACT_APP_BACKEND_URL}api/user/register`, { name, email, password, dob, contacts });
     console.log(data)
     dispatch({
       type: USER_REGISTER_SUCCESS,

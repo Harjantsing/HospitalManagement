@@ -49,7 +49,7 @@ const MedicineScreen = ({history}) => {
     useEffect(() => {
         async function fetchData() {
             console.log('hi')
-            const res = await axios.get('http://localhost:5000/api/medic/allmedicine')
+            const res = await axios.get(`${proccess.env.REACT_APP_BACKEND_URL}api/medic/allmedicine`)
             console.log(res.data)
             setmedicines(res.data)
         }
